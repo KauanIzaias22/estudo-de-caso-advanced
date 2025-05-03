@@ -34,3 +34,10 @@ O app em Streamlit:
 - Conecta-se ao MongoDB.
 - Realiza inserção, leitura, concatenação e manipulação de dados.
 - Apresenta os resultados diretamente na interface web.
+from pymongo import MongoClient
+
+# Conexão com o MongoDB (ajuste a URI conforme o docker-compose)
+client = MongoClient('mongodb://mongo:27017/')  # 'mongo' é o nome do serviço no docker-compose
+db = client['meu_banco']  # Nome do banco de dados
+collection = db['minha_colecao']  # Nome da coleção (tabela)
+
