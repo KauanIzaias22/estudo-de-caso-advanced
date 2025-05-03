@@ -5,7 +5,7 @@ st.title("App Streamlit com MongoDB")
 
 # Conexão com o MongoDB
 try:
-    client = MongoClient('mongodb://mongo:27017/')  # se estiver rodando fora do Docker, troque 'mongo' por 'localhost'
+    client = MongoClient('mongodb://mongo:27017/')
     db = client['meu_banco']
     collection = db['minha_colecao']
     st.success("Conectado ao MongoDB com sucesso!")
